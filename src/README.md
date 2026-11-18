@@ -5,7 +5,7 @@ Uma aplicação FastAPI super simples que permite aos estudantes visualizar e se
 ## Funcionalidades
 
 - Visualizar todas as atividades extracurriculares disponíveis
-- Inscrever-se em atividades
+- Inscrever-se em atividades, respeitando o limite de participantes de cada uma
 
 ## Primeiros Passos
 
@@ -30,7 +30,7 @@ Uma aplicação FastAPI super simples que permite aos estudantes visualizar e se
 | Método | Endpoint                                                          | Descrição                                                           |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Obter todas as atividades com seus detalhes e contagem atual de participantes |
-| POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscrever-se em uma atividade                                       |
+| POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscrever-se em uma atividade; retorna erro se ela estiver lotada   |
 
 ## Modelo de Dados
 
